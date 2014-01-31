@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8"/>
+            <title>Markdown Reader: </title>
+            <style>
+                html,body,div,span,object,iframe,
+                h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+                abbr,address,cite,code,
+                del,dfn,em,img,ins,kbd,q,samp,
+                small,strong,sub,sup,var,
+                b,i,
+                dl,dt,dd,ol,ul,li,
+                fieldset,form,label,legend,
+                table,caption,tbody,tfoot,thead,tr,th,td,
+                article,aside,canvas,details,figcaption,figure,
+                footer,header,hgroup,menu,nav,section,summary,
+                time,mark,audio,video{
+                	margin:0;
+                	padding:0;
+                	border:0;
+                	outline:0;
+                	font-size:100%;
+                	vertical-align: baseline;
+                	background:transparent;
+                }
+				fieldset {
+					padding: 0.5em;
+					border: 1px dotted #999;
+					float: left;
+				}
+                article,aside,details,figcaption,figure,
+                footer,header,hgroup,menu,nav,section{
+                	display:block;
+                }
+                html{
+                	background: #EDEDED;
+                	/* height: 100%; */
+                }
+                body{
+                	background:#FFF;
+                	margin: 20px auto 20px;
+                	min-height:100%;
+                	padding: 10pt;
+                	width: 95%;
+                	color:#444;
+                	font: normal 12pt Arial,Verdana,sans-serif;
+					-webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+					-moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+					box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+                }
+				h1,h2,h3,h4,h5,h6,p {
+					padding-top: 15pt;
+					padding-bottom: 0px;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				h1 {
+                	font-size: 300%;
+					padding-top: 35pt;
+					padding-bottom: 5pt;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				h2 {
+                	font-size: 200%;
+					padding-top: 35pt;
+					padding-bottom: 5pt;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				h3 {
+                	font-size: 165%;
+					padding-top: 35pt;
+					padding-bottom: 5pt;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				h4 {
+                	font-size: 130%;
+					padding-top: 25pt;
+					padding-bottom: 2pt;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				h5 {
+                	font-size: 120%;
+					padding-top: 25pt;
+					padding-bottom: 2pt;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				h6 {
+                	font-size: 100%;
+					font-weight: bold;
+					padding-top: 15pt;
+					padding-bottom: 0pt;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				p, li {
+					padding-top: 15pt;
+					padding-bottom: 0pt;
+					margin-top: 0px;
+					margin-bottom: 0px;	
+                	font: normal 12pt/16pt Arial,Verdana,sans-serif;
+				}
+				li {
+					margin-left: 20pt;
+				}
+				pre {
+					margin-left: 20pt;
+					padding: 10pt 5pt 10pt;
+					margin-top: 20pt;
+					margin-bottom: 0pt;
+					border: 1px solid grey;
+				}
+				p code {
+                	font: normal 12pt/16pt Arial,Verdana,sans-serif;
+					padding: 0px 2px 0px 2px;
+					border: 1px solid grey;
+				}
+				a {
+					color: blue;
+				}
+            </style>
+		</head>
+		<body>
+			<div id='fn'>
+			</div>
+			<hr>
+			<div id='MDT'>
+			</div>
+		</body>
+<script>
+var gui = require('nw.gui');
+var marked = require('marked');
+var fs = require( "fs" );
+
+var markdown_text = document.getElementById('MDT');
+var filename_text = document.getElementById('fn');
+
+// console.log(gui.App.argv);
+// document.write(JSON.stringify(gui.App.argv)+"<br>");
+
+// Listen to `open` event
+gui.App.on('open', function(cmdline) {
+  console.log('command line: ' + cmdline);
+});
+
+if (gui.App.argv.length>0) {
+	fname = gui.App.argv[0];
+	filename_text.innerHTML = fname;
+	fs.readFile(fname, 'utf8', function (err, data) {
+		if (err) throw err;
+		console.log(data);
+		outtxt = marked( data );
+		markdown_text.innerHTML = outtxt;
+	});
+	
+} else {
+	document.write("No file specified<br>");
+	document.write("Use: <code>viewMarkdown filename</code>");
+}
+</script>
+</html>

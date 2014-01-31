@@ -1,0 +1,9 @@
+{
+  "name": "ViewMarkdown",
+  "main": "main.html",
+  "window": {
+    "toolbar": true,
+    "width": 1400,
+    "height": 800
+  }
+}
