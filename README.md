@@ -13,7 +13,7 @@ Have a desktop reader application to read `.md` and `.markdown` files.
 1. node-webkit binaries(get it from: https://github.com/rogerwang/node-webkit#downloads)
 1. a ZIP archiver (gets usually pre-installed on your OS, open command line and type `zip`, if you get output = you have it)
 1. this source folder. Get it with git or github 'clone' command or 'Download ZIP' and expand sources 
-1. markdown module (get it with: `npm install marked` shall be called from within source folder and shall create `node_modules` folder) 
+1. markdown module (get it with: `npm install marked` shall be called from within source folder and shall create `node_modules` folder, more about marked at https://github.com/chjj/marked/) 
 
 ### How to build binary application
 
