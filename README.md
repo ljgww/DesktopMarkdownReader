@@ -9,7 +9,7 @@ Have a desktop reader application to read `.md` and `.markdown` files.
 
 Needs a bit of Lego spirit to make it working. Reuse excellent available open source code, glue it together.
 
-Helps learning.
+It's fun and helps learning.
 
 ## Build it
 
