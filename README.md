@@ -5,6 +5,12 @@ Desktop Markdown Reader
 
 Have a desktop reader application to read `.md` and `.markdown` files.
 
+## Realization
+
+Needs a bit of Lego spirit to make it working. Reuse excellent available open source code, glue it together.
+
+Helps learning.
+
 ## Build it
 
 ### What you need?
