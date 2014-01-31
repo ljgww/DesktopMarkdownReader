@@ -1,7 +1,9 @@
 Desktop Markdown Reader
 =====================
 
-Idea: Have a desktop reader application to read `.md` and `.markdown` files.
+## Idea
+
+Have a desktop reader application to read `.md` and `.markdown` files.
 
 ## Build it
 
