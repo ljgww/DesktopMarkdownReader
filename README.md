@@ -45,6 +45,6 @@ File name shall be specified with a full path, otherwise reader would not manage
 
 ### Binaries
 
-- [https://s3-eu-west-1.amazonaws.com/ljgww.opensource/DesktopMarkdownReader/OSX/DesktopMarkdownReader.dmg](Mac OSX "disk image binary")
+- [Mac OSX](https://s3-eu-west-1.amazonaws.com/ljgww.opensource/DesktopMarkdownReader/OSX/DesktopMarkdownReader.dmg "disk image binary")
 - Windows (coming)
 
