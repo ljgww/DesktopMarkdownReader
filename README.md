@@ -42,3 +42,9 @@ File name shall be specified with a full path, otherwise reader would not manage
 - To read file, right click on `.md` or `.markdown file`, select 'open with...', in the dialog click browse and navigate to `viewMarkdown.exe`, select "always use this application", Click OK.
 - Reader shall show you rendered text, and every next time when you double-click on `.md` or `.markdown file` it shall open reader automatically.
 - Windows supplies full path name to your file
+
+### Binaries
+
+- [https://s3-eu-west-1.amazonaws.com/ljgww.opensource/DesktopMarkdownReader/OSX/DesktopMarkdownReader.dmg](Mac OSX "disk image binary")
+- Windows (coming)
+
