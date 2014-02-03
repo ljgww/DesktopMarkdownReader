@@ -43,7 +43,7 @@ File name shall be specified with a full path, otherwise reader would not manage
 - Reader shall show you rendered text, and every next time when you double-click on `.md` or `.markdown file` it shall open reader automatically.
 - Windows supplies full path name to your file
 
-### Binaries
+### Binaries (compiled executables)
 
 - [Mac OSX binary](https://s3-eu-west-1.amazonaws.com/ljgww.opensource/DesktopMarkdownReader/OSX/DesktopMarkdownReader.dmg "disk image binary")
 - [Windows binary (zip)](https://s3-eu-west-1.amazonaws.com/ljgww.opensource/DesktopMarkdownReader/WIN/DesktopMarkdownReader.zip)
